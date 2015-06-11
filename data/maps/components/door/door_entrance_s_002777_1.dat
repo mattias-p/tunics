@@ -10,18 +10,18 @@ properties{
 tile{
   layer = 1,
   x = 64,
-  y = 40,
+  y = 32,
   width = 32,
-  height = 160,
+  height = 176,
   pattern = "floor_small.2",
 }
 
 tile{
   layer = 1,
   x = 224,
-  y = 40,
+  y = 32,
   width = 32,
-  height = 160,
+  height = 176,
   pattern = "floor_small.2",
 }
 
@@ -148,7 +148,7 @@ tile{
   y = 208,
   width = 16,
   height = 32,
-  pattern = "floor_small.2",
+  pattern = "floor_small.1",
 }
 
 tile{
@@ -167,6 +167,42 @@ tile{
   width = 8,
   height = 8,
   pattern = "barrier.1.2",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 32,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.1",
+}
+
+tile{
+  layer = 1,
+  x = 224,
+  y = 32,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.1",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 200,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.2",
+}
+
+tile{
+  layer = 1,
+  x = 224,
+  y = 200,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.2",
 }
 
 dynamic_tile{

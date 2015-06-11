@@ -10,9 +10,9 @@ properties{
 tile{
   layer = 1,
   x = 128,
-  y = 32,
+  y = 40,
   width = 64,
-  height = 176,
+  height = 160,
   pattern = "floor_border.2",
 }
 

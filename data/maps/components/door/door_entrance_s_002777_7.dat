@@ -202,7 +202,7 @@ tile{
   y = 208,
   width = 16,
   height = 32,
-  pattern = "floor_small.2",
+  pattern = "floor_small.1",
 }
 
 tile{
