@@ -43,7 +43,5 @@ function sol.main:on_started()
 end
 
 function sol.main:on_finished()
-    if zentropy.game.game then
-        zentropy.game.game:save()
-    end
+    zentropy.game.save()
 end
