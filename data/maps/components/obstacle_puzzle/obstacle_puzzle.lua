@@ -41,6 +41,13 @@ function puzzle.init(map, data)
         else
             hidden_chest:set_enabled(false)
         end
+
+        sol.timer.start(5000, function ()
+            hidden_chest:set_enabled(false)
+            switch:set_activated(false)
+            return true
+        end)
+
         placeholder:remove()
     else
         map:set_entities_enabled('treasure_obstacle_', false)

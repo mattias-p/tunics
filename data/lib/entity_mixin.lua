@@ -96,8 +96,10 @@ function entity_mixin.mixin(mt)
                 end
 
                 if enemy:test_obstacles(enemy_dx, enemy_dy) then
+                    print("killing")
                     enemy:set_life(0)
                 else
+                    print("moving " .. enemy_dx .. ";" .. enemy_dy)
                     enemy:set_position(enemy_x + enemy_dx, enemy_y + enemy_dy - 1)
                     enemy:restart() -- work around solarus bug (fixed in 1.5)
                 end

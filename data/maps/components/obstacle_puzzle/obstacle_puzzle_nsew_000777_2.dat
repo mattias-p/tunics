@@ -34,11 +34,37 @@ tile{
   pattern = "block",
 }
 
+tile{
+  layer = 1,
+  x = 104,
+  y = 168,
+  width = 112,
+  height = 8,
+  pattern = "barrier.3.border",
+}
+
+tile{
+  layer = 1,
+  x = 88,
+  y = 32,
+  width = 8,
+  height = 136,
+  pattern = "barrier.3.border",
+}
+
+tile{
+  layer = 1,
+  x = 224,
+  y = 32,
+  width = 8,
+  height = 136,
+  pattern = "barrier.3.border",
+}
+
 block{
   layer = 1,
   x = 64,
   y = 165,
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -46,11 +72,10 @@ block{
 }
 
 block{
+  name = "block_2",
   layer = 1,
   x = 64,
   y = 181,
-  name = "block_2",
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -61,7 +86,6 @@ block{
   layer = 1,
   x = 80,
   y = 181,
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -72,7 +96,6 @@ block{
   layer = 1,
   x = 256,
   y = 165,
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -80,11 +103,10 @@ block{
 }
 
 block{
+  name = "block_3",
   layer = 1,
   x = 256,
   y = 181,
-  name = "block_3",
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -95,7 +117,6 @@ block{
   layer = 1,
   x = 240,
   y = 181,
-  direction = -1,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
@@ -103,32 +124,32 @@ block{
 }
 
 dynamic_tile{
+  name = "pot_1",
   layer = 1,
   x = 56,
   y = 56,
+  pattern = "floor_pot",
   width = 16,
   height = 16,
-  name = "pot_1",
-  pattern = "floor_pot",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "pot_2",
   layer = 1,
   x = 248,
   y = 56,
+  pattern = "floor_pot",
   width = 16,
   height = 16,
-  name = "pot_2",
-  pattern = "floor_pot",
   enabled_at_start = true,
 }
 
 switch{
+  name = "switch",
   layer = 1,
   x = 0,
   y = 0,
-  name = "switch",
   subtype = "walkable",
   sprite = "entities/switch",
   needs_block = false,
@@ -136,68 +157,2092 @@ switch{
 }
 
 dynamic_tile{
+  name = "treasure_obstacle_chest",
   layer = 1,
-  x = 80,
-  y = 128,
-  width = 32,
-  height = 32,
-  name = "enemy_7",
-  pattern = "placeholder_enemy",
-  enabled_at_start = true,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 200,
-  y = 128,
-  width = 32,
-  height = 32,
-  name = "enemy_2",
-  pattern = "placeholder_enemy",
-  enabled_at_start = true,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 200,
-  y = 80,
-  width = 32,
-  height = 32,
-  name = "enemy_3",
-  pattern = "placeholder_enemy",
-  enabled_at_start = true,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 80,
-  y = 80,
-  width = 32,
-  height = 32,
-  name = "enemy_4",
-  pattern = "placeholder_enemy",
-  enabled_at_start = true,
-}
-
-dynamic_tile{
-  layer = 1,
-  x = 152,
+  x = 120,
   y = 112,
+  pattern = "placeholder_treasure_puzzle",
   width = 16,
   height = 16,
-  name = "treasure_obstacle_chest",
-  pattern = "placeholder_treasure_puzzle",
   enabled_at_start = true,
 }
 
 dynamic_tile{
+  name = "treasure_open_chest",
+  layer = 1,
+  x = 120,
+  y = 56,
+  pattern = "placeholder_treasure_open",
+  width = 16,
+  height = 16,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_7",
+  layer = 1,
+  x = 96,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_2",
+  layer = 1,
+  x = 96,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_3",
+  layer = 1,
+  x = 96,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_4",
+  layer = 1,
+  x = 96,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_8",
+  layer = 1,
+  x = 96,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_5",
+  layer = 1,
+  x = 96,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_6",
+  layer = 1,
+  x = 96,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_9",
+  layer = 1,
+  x = 96,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_10",
+  layer = 1,
+  x = 96,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_11",
+  layer = 1,
+  x = 96,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_12",
+  layer = 1,
+  x = 96,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_13",
+  layer = 1,
+  x = 96,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_14",
+  layer = 1,
+  x = 96,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_18",
+  layer = 1,
+  x = 104,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_19",
+  layer = 1,
+  x = 104,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_20",
+  layer = 1,
+  x = 104,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_21",
+  layer = 1,
+  x = 104,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_22",
+  layer = 1,
+  x = 104,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_23",
+  layer = 1,
+  x = 104,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_24",
+  layer = 1,
+  x = 104,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_25",
+  layer = 1,
+  x = 104,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_26",
+  layer = 1,
+  x = 104,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_27",
+  layer = 1,
+  x = 104,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_28",
+  layer = 1,
+  x = 104,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_29",
+  layer = 1,
+  x = 104,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_30",
+  layer = 1,
+  x = 104,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_34",
+  layer = 1,
+  x = 112,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_35",
+  layer = 1,
+  x = 112,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_36",
+  layer = 1,
+  x = 112,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_37",
+  layer = 1,
+  x = 112,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_38",
+  layer = 1,
+  x = 112,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_39",
+  layer = 1,
+  x = 112,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_40",
+  layer = 1,
+  x = 112,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_41",
+  layer = 1,
+  x = 112,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_42",
+  layer = 1,
+  x = 112,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_43",
+  layer = 1,
+  x = 112,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_44",
+  layer = 1,
+  x = 112,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_45",
+  layer = 1,
+  x = 112,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_46",
+  layer = 1,
+  x = 112,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_50",
+  layer = 1,
+  x = 120,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_51",
+  layer = 1,
+  x = 120,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_52",
+  layer = 1,
+  x = 120,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_53",
+  layer = 1,
+  x = 120,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_54",
+  layer = 1,
+  x = 120,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_55",
+  layer = 1,
+  x = 120,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_56",
+  layer = 1,
+  x = 120,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_57",
+  layer = 1,
+  x = 120,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_58",
+  layer = 1,
+  x = 120,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_59",
+  layer = 1,
+  x = 120,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_60",
+  layer = 1,
+  x = 120,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_61",
+  layer = 1,
+  x = 120,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_62",
+  layer = 1,
+  x = 120,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_63",
+  layer = 1,
+  x = 120,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_64",
+  layer = 1,
+  x = 120,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_66",
+  layer = 1,
+  x = 128,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_67",
+  layer = 1,
+  x = 128,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_68",
+  layer = 1,
+  x = 128,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_69",
+  layer = 1,
+  x = 128,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_70",
+  layer = 1,
+  x = 128,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_71",
+  layer = 1,
+  x = 128,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_72",
+  layer = 1,
+  x = 128,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_73",
+  layer = 1,
+  x = 128,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_74",
+  layer = 1,
+  x = 128,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_75",
+  layer = 1,
+  x = 128,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_76",
+  layer = 1,
+  x = 128,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_77",
+  layer = 1,
+  x = 128,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_78",
+  layer = 1,
+  x = 136,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_79",
+  layer = 1,
+  x = 136,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_80",
+  layer = 1,
+  x = 136,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_81",
+  layer = 1,
+  x = 136,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_82",
+  layer = 1,
+  x = 136,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_83",
+  layer = 1,
+  x = 136,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_84",
+  layer = 1,
+  x = 136,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_85",
+  layer = 1,
+  x = 136,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_86",
+  layer = 1,
+  x = 136,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_87",
+  layer = 1,
+  x = 136,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_88",
+  layer = 1,
+  x = 136,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_89",
+  layer = 1,
+  x = 136,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_90",
+  layer = 1,
+  x = 144,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_91",
+  layer = 1,
+  x = 144,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_92",
+  layer = 1,
+  x = 144,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_93",
+  layer = 1,
+  x = 144,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_94",
+  layer = 1,
+  x = 144,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_95",
+  layer = 1,
+  x = 144,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_96",
+  layer = 1,
+  x = 144,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_97",
+  layer = 1,
+  x = 144,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_98",
+  layer = 1,
+  x = 144,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_99",
+  layer = 1,
+  x = 144,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_100",
+  layer = 1,
+  x = 144,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_101",
+  layer = 1,
+  x = 144,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_124",
+  layer = 1,
+  x = 128,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_126",
+  layer = 1,
+  x = 136,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_128",
+  layer = 1,
+  x = 144,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_15",
+  layer = 1,
+  x = 96,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_31",
+  layer = 1,
+  x = 104,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_47",
+  layer = 1,
+  x = 112,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_65",
+  layer = 1,
+  x = 120,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_125",
+  layer = 1,
+  x = 128,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_127",
+  layer = 1,
+  x = 136,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_129",
+  layer = 1,
+  x = 144,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "treasure_obstacle_chest_2",
+  layer = 1,
+  x = 168,
+  y = 112,
+  pattern = "placeholder_treasure_puzzle",
+  width = 16,
+  height = 16,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "treasure_open_chest_2",
+  layer = 1,
+  x = 168,
+  y = 56,
+  pattern = "placeholder_treasure_open",
+  width = 16,
+  height = 16,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_32",
+  layer = 1,
+  x = 152,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_33",
+  layer = 1,
+  x = 152,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_48",
+  layer = 1,
+  x = 152,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_49",
   layer = 1,
   x = 152,
   y = 56,
-  width = 16,
-  height = 16,
-  name = "treasure_open_chest",
-  pattern = "placeholder_treasure_open",
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_102",
+  layer = 1,
+  x = 152,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_103",
+  layer = 1,
+  x = 152,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_104",
+  layer = 1,
+  x = 152,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_105",
+  layer = 1,
+  x = 152,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_106",
+  layer = 1,
+  x = 152,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_107",
+  layer = 1,
+  x = 152,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_108",
+  layer = 1,
+  x = 152,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_109",
+  layer = 1,
+  x = 152,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_110",
+  layer = 1,
+  x = 152,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_111",
+  layer = 1,
+  x = 160,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_112",
+  layer = 1,
+  x = 160,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_113",
+  layer = 1,
+  x = 160,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_114",
+  layer = 1,
+  x = 160,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_115",
+  layer = 1,
+  x = 160,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_116",
+  layer = 1,
+  x = 160,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_117",
+  layer = 1,
+  x = 160,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_118",
+  layer = 1,
+  x = 160,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_119",
+  layer = 1,
+  x = 160,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_120",
+  layer = 1,
+  x = 160,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_121",
+  layer = 1,
+  x = 160,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_122",
+  layer = 1,
+  x = 160,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_123",
+  layer = 1,
+  x = 160,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_130",
+  layer = 1,
+  x = 168,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_131",
+  layer = 1,
+  x = 168,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_132",
+  layer = 1,
+  x = 168,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_133",
+  layer = 1,
+  x = 168,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_134",
+  layer = 1,
+  x = 168,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_135",
+  layer = 1,
+  x = 168,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_136",
+  layer = 1,
+  x = 168,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_137",
+  layer = 1,
+  x = 168,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_138",
+  layer = 1,
+  x = 168,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_139",
+  layer = 1,
+  x = 168,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_140",
+  layer = 1,
+  x = 168,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_141",
+  layer = 1,
+  x = 168,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_142",
+  layer = 1,
+  x = 168,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_143",
+  layer = 1,
+  x = 168,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_144",
+  layer = 1,
+  x = 168,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_145",
+  layer = 1,
+  x = 176,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_146",
+  layer = 1,
+  x = 176,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_147",
+  layer = 1,
+  x = 176,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_148",
+  layer = 1,
+  x = 176,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_149",
+  layer = 1,
+  x = 176,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_150",
+  layer = 1,
+  x = 176,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_151",
+  layer = 1,
+  x = 176,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_152",
+  layer = 1,
+  x = 176,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_153",
+  layer = 1,
+  x = 176,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_154",
+  layer = 1,
+  x = 176,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_155",
+  layer = 1,
+  x = 176,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_156",
+  layer = 1,
+  x = 176,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_157",
+  layer = 1,
+  x = 184,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_158",
+  layer = 1,
+  x = 184,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_159",
+  layer = 1,
+  x = 184,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_160",
+  layer = 1,
+  x = 184,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_161",
+  layer = 1,
+  x = 184,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_162",
+  layer = 1,
+  x = 184,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_163",
+  layer = 1,
+  x = 184,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_164",
+  layer = 1,
+  x = 184,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_165",
+  layer = 1,
+  x = 184,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_166",
+  layer = 1,
+  x = 184,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_167",
+  layer = 1,
+  x = 184,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_168",
+  layer = 1,
+  x = 184,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_169",
+  layer = 1,
+  x = 192,
+  y = 32,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_170",
+  layer = 1,
+  x = 192,
+  y = 40,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_171",
+  layer = 1,
+  x = 192,
+  y = 48,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_172",
+  layer = 1,
+  x = 192,
+  y = 56,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_173",
+  layer = 1,
+  x = 192,
+  y = 64,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_174",
+  layer = 1,
+  x = 192,
+  y = 72,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_175",
+  layer = 1,
+  x = 192,
+  y = 80,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_176",
+  layer = 1,
+  x = 192,
+  y = 88,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_177",
+  layer = 1,
+  x = 192,
+  y = 96,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_178",
+  layer = 1,
+  x = 192,
+  y = 104,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_179",
+  layer = 1,
+  x = 192,
+  y = 112,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_180",
+  layer = 1,
+  x = 192,
+  y = 120,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_181",
+  layer = 1,
+  x = 176,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_182",
+  layer = 1,
+  x = 184,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_183",
+  layer = 1,
+  x = 192,
+  y = 128,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_184",
+  layer = 1,
+  x = 152,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_185",
+  layer = 1,
+  x = 160,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_186",
+  layer = 1,
+  x = 168,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_187",
+  layer = 1,
+  x = 176,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_188",
+  layer = 1,
+  x = 184,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
+  enabled_at_start = true,
+}
+
+dynamic_tile{
+  name = "enemy_189",
+  layer = 1,
+  x = 192,
+  y = 136,
+  pattern = "placeholder_enemy",
+  width = 32,
+  height = 32,
   enabled_at_start = true,
 }
 

@@ -48,3 +48,13 @@ function sol.main:on_finished()
         zentropy.game.game:save()
     end
 end
+
+local counter = 0
+
+function sol.main:on_update()
+    counter = counter + 1
+    if counter % 100 == 0 then
+        print(counter)
+    end
+    io.flush()
+end
